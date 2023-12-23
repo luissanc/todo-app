@@ -1,15 +1,8 @@
-import React, { useState } from 'react'
-import { useSelector, shallowEqual, useDispatch } from 'react-redux'
+import React from 'react'
+import { useSelector, shallowEqual } from 'react-redux'
 import TodoListItem from './TodoListItem'
 import ListGroup from 'react-bootstrap/ListGroup';
-import {Row, Col, Container} from 'react-bootstrap'
 
-// 'state.filters'
-
-const selectTodoIds = state => state.todos.map((todo) => {
-  
-  return todo.id
-})
 const selectTodoIdsFiltered = state => { 
   const todosIds = []
   const colors = state.filters.color

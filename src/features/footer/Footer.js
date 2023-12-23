@@ -1,20 +1,10 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { statusFilterChange } from '../filters/filtersSlice'
-import { Row, Col, Button, Container, Form, ListGroup } from 'react-bootstrap'
+import { Row, Col, Button, Form, ListGroup } from 'react-bootstrap'
 import { allCompleted, completedCleared} from '../todos/todosSlice'
 import {statusFilterChanged , colorFilterChanged} from '../filters/filtersSlice'
 
 function Footer() {
-
-
-
-    const todosRemaining = useSelector((state) => {
-        const uncompletedTodos = state.todos.filter(todo =>
-            !todo.completed
-        )
-        return uncompletedTodos.length
-    })
 
     const todosRemainingFiltered = useSelector( (state) => { 
         const todosIds = []

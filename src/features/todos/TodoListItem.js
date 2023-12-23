@@ -1,18 +1,12 @@
 import React from 'react'
-import ReactDOM from 'react-dom';
 import { useDispatch, useSelector } from 'react-redux'
 import { todoToggled, colorSelected, todoDeleted } from './todosSlice'
-import Button from 'react-bootstrap/Button'
 import ListGroup from 'react-bootstrap/ListGroup';
 import Form from 'react-bootstrap/Form'
-import { FormCheck } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCheck, faTrash } from '@fortawesome/free-solid-svg-icons'
-import Container from 'react-bootstrap/Container';
+import { faTrash } from '@fortawesome/free-solid-svg-icons'
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import InputGroup from 'react-bootstrap/InputGroup';
-import { Dropdown, DropdownButton } from 'react-bootstrap';
 
 
 
@@ -41,7 +35,6 @@ function TodoListItem({ id }) {
 
     }
 
-    const buttonVariant = 'danger'
 
     const getColorClass = (color) =>{
             switch(color){
@@ -72,7 +65,7 @@ function TodoListItem({ id }) {
                     <ListGroup.Item as='li' className={"list-group-item-" + getColorClass(color)}>
                         <Form.Check type={"checkbox"} id={"todo" + id} name={"todo" + id} className='my-0'>
                             <Form.Check.Input type={"checkbox"} checked={completed} onChange={handleCompletedchanged} />
-                            <Form.Check.Label className={completed ? 'TaskCompleted' : ''}>{todo.text}</Form.Check.Label>
+                            <Form.Check.Label className={completed ? 'TaskCompleted' : ''}>{text}</Form.Check.Label>
                             <div className={'Right'}><FontAwesomeIcon icon={faTrash} onClick={handleDelete} /></div>
 
                         </Form.Check>

@@ -3,7 +3,7 @@ import TodoList from './features/todos/TodoList'
 import Header from './features/header/Header';
 import Footer from './features/footer/Footer';
 import './App.css';
-import {Row, Col, Container} from 'react-bootstrap'
+import {Container} from 'react-bootstrap'
 
 
 function App() {
