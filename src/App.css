@@ -1,0 +1,18 @@
+.App {
+}
+
+.TaskCompleted{
+  text-decoration: line-through;
+}
+
+.Right{
+  float: right;
+  vertical-align: baseline;
+}
+.vertical-size{
+  min-height: 60vh;
+}
+
+h1{
+  text-align: center;
+}
